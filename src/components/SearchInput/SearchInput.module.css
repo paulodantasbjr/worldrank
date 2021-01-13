@@ -6,7 +6,7 @@
   border-radius: 8px;
   padding-left: 16px;
 
-  color: var(--text-color-secondary);
+  color: var(--text-color-secundary);
 }
 .input {
   border: none;
@@ -17,5 +17,6 @@
   outline: none;
 }
 .input::placeholder {
-  color: var(--text-color-secondary);
+  color: var(--text-color-secundary);
+  font-family: var(--font-family);
 }

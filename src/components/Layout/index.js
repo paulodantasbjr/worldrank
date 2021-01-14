@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import styles from './Layout.module.css';
 import { Brightness6Rounded } from '@material-ui/icons';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Layout = ({ children, title = 'World Rank' }) => {
   const [theme, setTheme] = useState('light');
@@ -61,7 +62,17 @@ const Layout = ({ children, title = 'World Rank' }) => {
 
       <main className={styles.main}>{children}</main>
 
-      <footer className={styles.footer}>footer</footer>
+      <footer className={styles.footer}>
+        <div>
+          <h3>Feito por Paulo Dantas</h3>
+          <Link href="https://github.com/paulodantasrj/worldrank">
+            <div className={styles.footer_icon}>
+              <GitHubIcon />
+              <span className={styles.footer_span}>GitHub</span>
+            </div>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };

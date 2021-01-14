@@ -2,15 +2,16 @@
 
 ## About The Project
 
-[Word Rank](https://worldrank.vercel.app/)
+Preview - [Word Rank](https://worldrank.vercel.app/)
 
-Primeira leitura
+Website designed to improve the concepts of react and nextjs.
 
 ### Built With
 
 - [NextJS](https://nextjs.org/)
 - [react-paginate](https://www.npmjs.com/package/react-paginate)
 - [@material-ui/icons](https://material-ui.com/pt/components/material-icons/)
+- [hosted](https://vercel.com/dashboard)
 
 <!-- GETTING STARTED -->
 

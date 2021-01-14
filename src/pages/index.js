@@ -33,7 +33,7 @@ const index = ({ countries }) => {
     indexOfLastCountry,
   );
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber + 1);
 
   return (
     <Layout>
@@ -43,11 +43,13 @@ const index = ({ countries }) => {
         onChange={onInputChange}
       />
       <Countries countries={currentCountry} />
-      <Pagination
-        countryPerPage={countryPerPage}
-        totalCountry={countries.length}
-        paginate={paginate}
-      />
+      {
+        <Pagination
+          countryPerPage={countryPerPage}
+          totalCountry={countries.length}
+          paginate={paginate}
+        />
+      }
     </Layout>
   );
 };

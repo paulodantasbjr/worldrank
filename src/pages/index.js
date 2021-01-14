@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import SearchInput from '../components/SearchInput';
 import Countries from '../components/CountriesTable';
-//import Pagination from '../components/Pagination';
 import ReactPaginate from 'react-paginate';
 import styles from '../styles/Home.module.css';
 
 const index = ({ countries }) => {
   const [keyword, setKeyword] = useState('');
-  const [currentPage, setCurrentPage] = useState(0);
-  const [countryPerPage, setCountryPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [countryPerPage] = useState(10);
 
   const filteredCountries = countries.filter(
     (country) =>
@@ -29,12 +28,13 @@ const index = ({ countries }) => {
   //get current country
   const indexOfLastCountry = currentPage * countryPerPage;
   const indexOfFirstPost = indexOfLastCountry - countryPerPage;
+
   const currentCountry = filteredCountries.slice(
     indexOfFirstPost,
     indexOfLastCountry,
   );
 
-  const pageCount = Math.ceil(countries.length / countryPerPage);
+  const pageCount = countries.length / countryPerPage;
 
   function handlePageClick({ selected: selectedPage }) {
     setCurrentPage(selectedPage);
@@ -54,6 +54,7 @@ const index = ({ countries }) => {
           previousLabel={'← Previous'}
           nextLabel={'Next →'}
           pageCount={pageCount}
+          initialPage={1}
           onPageChange={handlePageClick}
           containerClassName={styles.pagination}
           previousLinkClassName={styles.pagination_link}

@@ -2,3 +2,35 @@
   margin: 12px 0;
   color: var(--text-color-secundary);
 }
+.pagination_conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+
+  color: var(--primary-color);
+}
+
+.pagination_link {
+  font-weight: bold;
+}
+
+.pagination_link__active a {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+.pagination_link__disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}

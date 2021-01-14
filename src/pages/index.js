@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import SearchInput from '../components/SearchInput';
 import Countries from '../components/CountriesTable';
-import Pagination from '../components/Pagination';
+//import Pagination from '../components/Pagination';
+import ReactPaginate from 'react-paginate';
 import styles from '../styles/Home.module.css';
 
 const index = ({ countries }) => {
   const [keyword, setKeyword] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const [countryPerPage, setCountryPerPage] = useState(10);
 
   const filteredCountries = countries.filter(
@@ -33,7 +34,11 @@ const index = ({ countries }) => {
     indexOfLastCountry,
   );
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber + 1);
+  const pageCount = Math.ceil(countries.length / countryPerPage);
+
+  function handlePageClick({ selected: selectedPage }) {
+    setCurrentPage(selectedPage);
+  }
 
   return (
     <Layout>
@@ -43,13 +48,20 @@ const index = ({ countries }) => {
         onChange={onInputChange}
       />
       <Countries countries={currentCountry} />
-      {
-        <Pagination
-          countryPerPage={countryPerPage}
-          totalCountry={countries.length}
-          paginate={paginate}
+
+      <div className={styles.pagination_conteiner}>
+        <ReactPaginate
+          previousLabel={'← Previous'}
+          nextLabel={'Next →'}
+          pageCount={pageCount}
+          onPageChange={handlePageClick}
+          containerClassName={styles.pagination}
+          previousLinkClassName={styles.pagination_link}
+          nextLinkClassName={styles.pagination_link}
+          disabledClassName={styles.pagination_link__disabled}
+          activeClassName={styles.pagination_link__active}
         />
-      }
+      </div>
     </Layout>
   );
 };

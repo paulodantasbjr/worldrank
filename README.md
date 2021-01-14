@@ -6,6 +6,12 @@ Preview - [Word Rank](https://worldrank.vercel.app/)
 
 Website designed to improve the concepts of react and nextjs.
 
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app.png" alt="App" width="200px" height="500px">
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details.png" alt="Details App" width="200px" height="500px">
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details_darkmode.png" alt="Dark mode details App" width="200px" height="500px">
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/darkmode%20app.png" alt="Dark mode App" width="200px" height="500px">
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/search.png" alt="Search" width="200px" height="500px">
+
 ### Built With
 
 - [NextJS](https://nextjs.org/)

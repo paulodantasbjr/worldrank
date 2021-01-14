@@ -8,7 +8,7 @@ Website designed to improve the concepts of react and nextjs.
 
 
 
-<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app.png" alt="App" width="420px" height="680px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details.png" alt="Details App" width="420px" height="680px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/darkmode%20app.png" alt="Dark mode details App" width="420px" height="680px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details_darkmode.png" alt="Dark mode App" width="420px" height="680px">
+<img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app.png" alt="App" width="400px" height="600px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details.png" alt="Details App" width="400px" height="600px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/darkmode%20app.png" alt="Dark mode details App" width="400px" height="600px"><img src="https://github.com/paulodantasrj/worldrank/blob/master/src/images/app_details_darkmode.png" alt="Dark mode App" width="400px" height="600px">
 
 
 ### Built With
